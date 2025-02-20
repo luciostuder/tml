@@ -44,8 +44,29 @@ export default function Page() {
 
             {/* Projetos + estruturantes */}
             <div className="mt-4 max-w-[40vw]">
-              <div className="text-lg font-semibold bg-yellow-300 p-5 rounded-full inline-block">Projetos + estruturantes</div>
-              <div className="flex flex-col gap-2 mt-2">
+              <div className="flex flex-row items-center text-lg font-semibold p-1 bg-yellow-300 rounded-full inline-block">
+
+                <Image
+                  src="images/projetos_estruturantes.svg"
+                  alt="4 anos TML"
+                  width={80}
+                  height={80}
+                  className="inline-block"
+                />
+                <div className="flex flex-col items-start gap-2">
+                  <div>Projetos</div>
+                  <div className="flex flex-row gap-2 items-center">
+                    <Image
+                      src="images/bola_mais.svg"
+                      alt="4 anos TML"
+                      width={30}
+                      height={30}
+                    />
+                    estruturantes
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2 mt-2 rounded-b border-l border-r border-b border-yellow-300 p-3 rounded-2xl">
                 {item.highlights?.map((highlight, idx) => (
                   <ul key={idx} className="list-disc pl-5 mt-2 text-sm">
                     <li>
@@ -67,7 +88,12 @@ export default function Page() {
               <div className="flex flex-col gap-2 mt-2">
                 {item.metricas?.map((metrica, idx) => (
                   <div key={idx} className="flex flex-row items-center gap-2 mt-2">
-                    <div><div class="w-16 h-16 bg-yellow-300 rounded-full"></div></div>
+                    <Image
+                      src={`/images/${metrica.metrica_tipo_svg}`}
+                      alt={metrica.nome}
+                      width={100}
+                      height={100}
+                    />
                     <div>
                       <div className="flex flex-row gap-2 mt-2 items-end">
                         <div className="text-4xl font-bold">{metrica.numero}</div>
@@ -86,11 +112,24 @@ export default function Page() {
           <div className="mt-4">
             <div className="flex flex-row gap-2 mt-2">
               <div>
-                <div className="text-lg font-semibold bg-yellow-300 p-5 rounded-full inline-block">A TML</div>
+                <div className="flex flex-row items-center text-lg font-semibold bg-yellow-300 px-5 rounded-full inline-block">
+                  <Image
+                    src="images/TML.svg"
+                    alt="4 anos TML"
+                    width={70}
+                    height={70}
+                  />
+                  A TML
+                </div>
               </div>
               {item.tmls?.map((tml, idx) => (
                 <div key={idx} className="flex flex-col items-center mt-2">
-                  <div className="mb-2"><div class="w-8 h-8 bg-yellow-300 rounded-full"></div></div>
+                  <Image
+                    src={`/images/${tml.tml_tipo_svg}`}
+                    alt={tml.nome}
+                    width={50}
+                    height={50}
+                  />
                   <div className="text-2xl font-bold">{tml.numero}</div>
                   <div className="text-xs max-w-[20ch] text-center">{tml.descricao}</div>
                 </div>
@@ -102,7 +141,15 @@ export default function Page() {
 
           {/* Atividade */}
           <div className="mt-4">
-            <div className="text-lg font-semibold text-white bg-black p-3 pl-6 rounded-full">Atividade</div>
+            <div className="flex flex-row items-center text-lg font-semibold text-white bg-black pl-6 rounded-full">
+            <Image
+                      src="images/atividade.svg"
+                      alt="atividade"
+                      width={80}
+                      height={80}
+                    />
+              <div>Atividade</div>
+              </div>
             <div className="flex flex-row flex-wrap justify-center gap-4 mt-2">
 
               {item.atividades?.map((atividade, idx) => (
