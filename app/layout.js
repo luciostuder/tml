@@ -8,8 +8,8 @@ const lexend = Lexend({
 });
 
 export const metadata = {
-  title: "TML - factos",
-  description: "TML",
+  title: "TML - história",
+  description: "TML - esta é a nossa história",
 };
 
 export default function RootLayout({ children }) {
