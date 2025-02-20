@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import React from 'react'
 import useSWR from 'swr'
 
@@ -13,9 +14,25 @@ export default function Page() {
   if (!info) return <div>No data available</div>;
 
   return (
-    <div className="p-2">
+    <div>
+
+
+      {/* Header */}
+      <div className="flex flex-row items-center bg-[rgb(254,222,2)] w-[100vw] gap-10">
+        <Image
+          src="/images/4anos.png"
+          alt="4 anos TML"
+          width={500}
+          height={300}
+        />
+        <div className="text-center text-2xl font-bold">
+          Esta é a nossa história
+        </div>
+      </div>
+
+
       {info.map((item, index) => (
-        <div key={index}>
+        <div key={index} className="p-2">
 
           {/* Ano */}
           <div className="flex flex-row items-end gap-4">
