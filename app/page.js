@@ -57,10 +57,10 @@ export default function Page() {
                   </div>
                 </div>
 
-                <div className="flex flex-row gap-2 mt-2 ml-24">
+                <div className="flex flex-col lg:flex-row gap-2 mt-2 ml-24">
 
                   {/* Projetos + estruturantes */}
-                  <div className="mt-4 max-w-[40vw] p-4">
+                  <div className="mt-4 lg:max-w-[40vw] p-4">
                     <div className="flex flex-row items-center text-lg font-semibold p-1 bg-yellow-300 rounded-full w-80">
                       <Image
                         src="images/projetos_estruturantes.svg"
@@ -82,7 +82,10 @@ export default function Page() {
                         </div>
                       </div>
                     </div>
-                    <div className="flex flex-col gap-2 ml-14 rounded-b-[2rem] rounded-t-none border-l-4 border-r-4 border-b-4  border-yellow-300 p-3 rounded-2xl">
+                    <div className="flex flex-col gap-2 ml-14 border-yellow-300 p-3 -mt-12 pt-12 lg:pt-0 lg:mt-0
+                                    rounded-tl-0 rounded-tr-[2rem] rounded-br-[2rem] border-t-4 border-r-4 border-b-4  
+                                    lg:border-t-0 lg:border-l-4 lg:rounded-t-none lg:rounded-bl-[2rem] 
+                    ">
                       {item.highlights?.map((highlight, idx) => (
                         <ul key={idx} className="list-disc pl-5 mt-2 text-sm">
                           <li>
@@ -101,11 +104,11 @@ export default function Page() {
 
 
                   {/* Metricas */}
-                  <div className="relative mt-4 -ml-4">
+                  <div className="relative lg:mt-4 ml-8 lg:-ml-4 mb-8 lg:mb-0">
 
 
                     <div className="relative flex flex-col mt-2">
-                      <div className="h-[calc(100%-80px)] w-[55px] absolute top-[40px] -left-[13px] border-yellow-300 rounded-b-none border-t-4 border-x-4 rounded-full z-[-10]"></div>
+                      <div className="h-[calc(100%-80px)] w-[55px] absolute top-[40px] -left-[13px] border-yellow-300 rounded-b-none lg:border-t-4 lg:border-l-4 border-r-4 rounded-full z-[-10]"></div>
                       {item.metricas?.map((metrica, idx) => (
                         <div key={idx} className="flex flex-row items-center gap-2">
                           <Image
