@@ -12,8 +12,17 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        lexend: ['Lexend', 'sans-serif'],  // Add Lexend font to the theme
+        lexend: ['Lexend', 'sans-serif'], 
       },
+    },
+    keyframes: {
+      slide: {
+        '0%, 100%': { transform: 'translateX(0)' },
+        '50%': { transform: 'translateX(20%)' }
+      },
+    },
+    animation: {
+      slide: 'slide 4s ease-in-out infinite',
     },
   },
   plugins: [],

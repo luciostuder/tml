@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from 'react';
 import Image from 'next/image';
 import React from 'react'
 import useSWR from 'swr'
@@ -7,6 +8,9 @@ import useSWR from 'swr'
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Page() {
+
+  const [isVisible, setIsVisible] = useState(false);
+
   const { data: info, error, isLoading } = useSWR('api/tml-info', fetcher);
 
   if (error) return <div>Falha ao carregar os produtos. Tente novamente.</div>;
@@ -42,7 +46,7 @@ export default function Page() {
 
           <div className="ml-16">
             {info.map((item, index) => (
-              <div key={index}>
+              <div key={index} className="mb-20">
 
                 {/* Ano */}
                 <div className="flex flex-row items-center gap-4">
@@ -162,16 +166,28 @@ export default function Page() {
 
                 {/* Atividade */}
                 <div className="mt-8  ml-[7rem]">
-                  <div className="flex flex-row items-center text-lg font-semibold text-white bg-black pl-6 rounded-full">
-                    <Image
-                      src="images/atividade.svg"
-                      alt="atividade"
-                      width={80}
-                      height={80}
-                    />
-                    <div>Atividade</div>
+                  <div
+                    onClick={() => setIsVisible(!isVisible)}
+                    className=" text-lg font-semibold text-white bg-black pl-6 rounded-full cursor-pointer"
+                  >
+                    <div className="w-full overflow-hidden">
+                      <div className="grid grid-cols-[auto,1fr] items-center inline-block animate-slide whitespace-nowrap">
+                        <Image
+                          src="images/atividade.svg"
+                          alt="atividade"
+                          width={80}
+                          height={80}
+                        />
+                        <div>
+                          Atividade
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="relative flex flex-row flex-wrap justify-center gap-4 mt-2">
+                  <div
+                    className="relative flex flex-row flex-wrap justify-center gap-4 mt-2"
+                    style={{ display: isVisible ? 'flex' : 'none' }}
+                  >
 
                     {item.atividades?.map((atividade, idx) => (
                       <div key={idx} className="relative -top-8 flex flex-col flex-wrap items-center mt-2">
