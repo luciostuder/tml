@@ -17,9 +17,9 @@ export default function Page() {
     <>
 
 
-      <div className="mx-auto max-w-[1200px]">
-        {/* Header */}
-        <div className="grid grid-cols-[auto,1fr] bg-[rgb(254,222,2)] gap-5">
+      {/* Header */}
+      <div className="bg-[rgb(254,222,2)]">
+        <div className="mx-auto max-w-[1200px] grid grid-cols-[auto,1fr] bg-[rgb(254,222,2)] gap-5">
           <Image
             src="/images/4anos.png"
             alt="4 anos TML"
@@ -30,6 +30,10 @@ export default function Page() {
             Esta é a nossa história
           </div>
         </div>
+      </div>
+
+
+      <div className="relative mx-auto max-w-[1200px]">
 
         <div className="relative mt-10">
 
