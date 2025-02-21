@@ -37,7 +37,7 @@ export default function Page() {
       </div>
 
 
-      <div className="relative mx-auto max-w-[1200px]">
+      <div className="relative mx-auto max-w-[1200px] px-10">
 
         <div className="relative mt-10">
 
@@ -171,7 +171,8 @@ export default function Page() {
                     className=" text-lg font-semibold text-white bg-black pl-6 rounded-full cursor-pointer"
                   >
                     <div className="w-full overflow-hidden">
-                      <div className="grid grid-cols-[auto,1fr] items-center inline-block animate-slide whitespace-nowrap">
+                      <div className={`grid grid-cols-[auto,1fr] items-center whitespace-nowrap ${!isVisible ? "animate-slide" : ""}`}
+                      >
                         <Image
                           src="images/atividade.svg"
                           alt="atividade"
@@ -179,7 +180,7 @@ export default function Page() {
                           height={80}
                         />
                         <div>
-                        {`Atividade${!isVisible ? ': explore ' + item.ano[0] : ' em ' + item.ano[0]}` }
+                          {`Atividade${!isVisible ? ': explore ' + item.ano[0] : ' em ' + item.ano[0]}`}
                         </div>
                       </div>
                     </div>
