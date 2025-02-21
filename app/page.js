@@ -84,11 +84,11 @@ export default function Page() {
 
 
             {/* Metricas */}
-            <div className="relative mt-4">
+            <div className="relative mt-4 -ml-4">
               
             
-              <div className="relative flex flex-col gap-2 mt-2 border-yellow-300 border-4">
-              <div className="absolute mt-4 border-yellow-300 border-4 h-[calc(100%-60px)]"></div>
+              <div className="relative flex flex-col mt-2">
+              <div className="h-[calc(100%-80px)] w-[55px] absolute top-[40px] -left-[13px] border-yellow-300 rounded-b-none border-t-4 border-x-4 rounded-full z-[-10]"></div>
                 {item.metricas?.map((metrica, idx) => (
                   <div key={idx} className="flex flex-row items-center gap-2">
                     <Image
