@@ -19,3 +19,7 @@ body {
   background: var(--background);
   @apply font-lexend antialiased;
 }
+
+.hidden-element {
+  display: none;
+}

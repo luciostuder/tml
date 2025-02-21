@@ -9,9 +9,32 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Page() {
 
-  const [isVisible, setIsVisible] = useState(false);
+  //
+  // define states and variables
+
+  const [isVisible, setIsVisible] = useState(-1);
+
+
+  //
+  // Fetch data
 
   const { data: info, error, isLoading } = useSWR('api/tml-info', fetcher);
+
+
+  //
+  // Event Handlers
+
+  function toggleActive(index) {
+    if (index == isVisible) {
+      setIsVisible(-1);
+    } else {
+      setIsVisible(index);
+    }
+  }
+
+
+  //
+  // Render
 
   if (error) return <div>Falha ao carregar os produtos. Tente novamente.</div>;
   if (isLoading) return <div>Loading...</div>;
@@ -19,30 +42,31 @@ export default function Page() {
 
   return (
     <>
-
-
       {/* Header */}
       <div className="bg-[rgb(254,222,2)]">
-        <div className="mx-auto max-w-[1200px] grid grid-cols-[auto,1fr] bg-[rgb(254,222,2)] gap-5">
-          <Image
-            src="/images/4anos.png"
-            alt="4 anos TML"
-            width={500}
-            height={300}
-          />
-          <div className="flex justify-center items-center text-2xl font-bold pr-20">
+        <div className="mx-auto max-w-[1200px] lg:grid lg:grid-cols-[auto,1fr] bg-[rgb(254,222,2)] gap-5">
+          <div className="w-screen lg:w-auto"> {/* Wrapper para evitar limitação */}
+            <Image
+              src="/images/4anos.png"
+              alt="4 anos TML"
+              width={500}
+              height={300}
+              className="w-screen lg:w-auto"
+            />
+          </div>
+          <div className="flex justify-center items-center text-2xl pb-8 lg:pb-0 lg:text-4xl font-bold lg:pr-10">
             Esta é a nossa história
           </div>
         </div>
       </div>
 
 
-      <div className="relative mx-auto max-w-[1200px] px-10">
+      <div className="relative mx-auto max-w-[1200px] px-5 lg:px-10">
 
         <div className="relative mt-10">
 
           {/* Timeline */}
-          <div className="absolute top-5 left-16 h-[calc(100%-5px)] border-[6px] border-yellow-300 z-[-10]"></div>
+          <div className="absolute top-5 lg:left-16 h-[calc(100%-5px)] border-[6px] border-yellow-300 z-[-10]"></div>
 
           <div className="ml-16">
             {info.map((item, index) => (
@@ -170,11 +194,11 @@ export default function Page() {
                 {/* Atividade */}
                 <div className="mt-8  ml-[7rem]">
                   <div
-                    onClick={() => setIsVisible(!isVisible)}
+                    onClick={() => toggleActive(index)}
                     className=" text-lg font-semibold text-white bg-black pl-6 rounded-full cursor-pointer"
                   >
                     <div className="w-full overflow-hidden">
-                      <div className={`grid grid-cols-[auto,1fr] items-center whitespace-nowrap ${!isVisible ? "animate-slide" : ""}`}
+                      <div className={`grid grid-cols-[auto,1fr] items-center whitespace-nowrap ${isVisible !== index ? "animate-slide" : ""}`}
                       >
                         <Image
                           src="images/atividade.svg"
@@ -183,24 +207,24 @@ export default function Page() {
                           height={80}
                         />
                         <div>
-                          {`Atividade${!isVisible ? ': explore ' + item.ano[0] : ' em ' + item.ano[0]}`}
+                          {`${!isVisible !== index ? 'Clique e veja a atividade da TML em ' + item.ano[0] : 'Atividade'}`}   {/*    ' em ' + item.ano[0].  */}
                         </div>
                       </div>
                     </div>
                   </div>
                   <div
                     className="relative flex flex-row flex-wrap justify-center gap-4 mt-2"
-                    style={{ display: isVisible ? 'flex' : 'none' }}
+                    style={{ display: isVisible === index ? 'flex' : 'none' }}
                   >
 
                     {item.atividades?.map((atividade, idx) => (
-                      <div key={idx} className="relative -top-8 flex flex-col flex-wrap items-center mt-2">
-                        <div className="w-[30ch] rounded-t-full rounded-b-none bg-gray-100">
+                      <div key={idx} className="group relative -top-8 flex flex-col flex-wrap items-center mt-2">
+                        <div className="w-[30ch] rounded-t-full rounded-b-none z-10">
                           <div className="p-2 rounded-full inline-block w-[100%] text-center font-bold bg-[rgb(216,217,214)]">
                             {atividade.numero} {atividade.descricao}
                           </div>
                         </div>
-                        <div className="mb-2 p-2 inline-block w-[30ch] rounded-t-none rounded-b-xl bg-[#f6f6f5]">
+                        <div className="hidden group-hover:block -mt-4 pt-6 mb-2 p-2 w-[30ch] rounded-xl bg-[#f6f6f5]">
                           {atividade.topicos?.map((topico, idx) => (
                             <div key={idx}>
                               {topico.descricao != "" && (
@@ -214,6 +238,40 @@ export default function Page() {
                             </div>
                           ))}
                         </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Acontecimentos */}
+                <div className="mt-8  ml-[7rem]">
+                  <div
+                    onClick={() => toggleActive(index)}
+                    className=" text-lg font-semibold text-white bg-black pl-6 rounded-full cursor-pointer"
+                  >
+                    <div className="w-full overflow-hidden">
+                      <div className={`grid grid-cols-[auto,1fr] items-center whitespace-nowrap ${isVisible !== index ? "animate-slide" : ""}`}
+                      >
+                        <Image
+                          src="images/atividade.svg"
+                          alt="atividade"
+                          width={80}
+                          height={80}
+                        />
+                        <div>
+                          {`${!isVisible !== index ? 'Clique e veja os acontecimentos da TML em ' + item.ano[0] : 'Acontecimentos'}`}   {/*    ' em ' + item.ano[0].  */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="relative flex flex-row flex-wrap justify-center gap-4 mt-2"
+                    style={{ display: isVisible === index ? 'flex' : 'none' }}
+                  >
+                    {item.acontecimentos?.map((acontecimento, idx) => (
+                      <div key={idx} className="-ml-50">
+                        <span className="font-bold pr-8">{acontecimento.data}</span>
+                        <span>{acontecimento.descricao}</span>
                       </div>
                     ))}
                   </div>
