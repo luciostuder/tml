@@ -179,7 +179,7 @@ export default function Page() {
                           height={80}
                         />
                         <div>
-                          Atividade
+                        {`Atividade${!isVisible ? ': explore ' + item.ano[0] : ' em ' + item.ano[0]}` }
                         </div>
                       </div>
                     </div>
