@@ -160,7 +160,7 @@ export default function Page() {
                     <div className="flex flex-col gap-2 mt-2">
 
                       {/* A TML */}
-                      <div className="w-40 h-[6ch] relative -top-12 -right-60  flex flex-row gap-2">
+                      <div className="w-40 h-[6ch] relative -top-12 ml-20 flex flex-row gap-2">
                         <div className="flex flex-row items-center text-lg font-semibold bg-yellow-300  pl-2 pr-4 rounded-full">
                           <Image
                             src="images/TML.svg"
