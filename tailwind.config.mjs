@@ -18,7 +18,7 @@ export default {
     keyframes: {
       slide: {
         '0%, 100%': { transform: 'translateX(0)' },
-        '50%': { transform: 'translateX(15%)' }
+        '50%': { transform: 'translateX(10%)' }
       },
     },
     animation: {
