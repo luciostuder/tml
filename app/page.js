@@ -77,6 +77,10 @@ export default function Page() {
                     </div>
                   </div>
 
+
+    {/* Elementos que só aparecem se o ano for >= 2021 */}
+    {item.ano[0] >= 2021 && (
+      <>
                   {/* Projetos + estruturantes */}
                   <div className="">
                     <div className="flex flex-row items-center text-lg font-semibold p-1 bg-yellow-300 rounded-full w-60 ml-20">
@@ -193,9 +197,13 @@ export default function Page() {
                       </div>
                     </div>
                   </div>
-
+                  </>
+)}
                   <div className="ml-[27px] -mt-2 mr-16 border-8 border-r-0 border-b-0 border-yellow-300 rounded-tl-[2rem] ">
 
+{/* Elementos que só aparecem se o ano for >= 2021 */}
+{item.ano[0] >= 2021 && (
+  <>
                     {/* Atividade */}
                     <div className="mt-8 ml-4 -mr-8 mb-0">
                       <div
@@ -247,8 +255,10 @@ export default function Page() {
                         ))}
                       </div>
                     </div>
-
-
+  </>
+)}
+{item.acontecimentos && item.acontecimentos.length > 0 && (
+  <>
                     {/* Acontecimentos */}
                     <div className="mt-8 ml-4 -mr-8 mb-0">
                       <div
@@ -287,6 +297,8 @@ export default function Page() {
                         ))}
                       </div>
                     </div>
+  </>
+)}
                   </div>
 
                 </div>
@@ -346,6 +358,9 @@ export default function Page() {
                     </div>
                   </div>
 
+  {/* Elementos que só aparecem se o ano for >= 2021 */}
+  {item.ano[0] >= 2021 && (
+ <>
                   <div className="flex flex-row gap-2 mt-2 ml-24">
 
                     {/* Projetos + estruturantes */}
@@ -507,7 +522,11 @@ export default function Page() {
                       ))}
                     </div>
                   </div>
+    </>
+  )}
 
+{item.acontecimentos && item.acontecimentos.length > 0 && (
+  <>
                   {/* Acontecimentos */}
                   <div className="mt-8  ml-[7rem]">
                     <div
@@ -546,7 +565,8 @@ export default function Page() {
                       ))}
                     </div>
                   </div>
-
+</>
+)}
                 </div>
               ))
               }
