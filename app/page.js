@@ -271,18 +271,19 @@ export default function Page() {
                         </div>
                       </div>
                       <div
-                        className="relative flex flex-row flex-wrap justify-start gap-4 mt-2 border-l-8 border-yellow-300"
+                        className="relative flex flex-row flex-wrap justify-start gap-4 mt-2 pt-4"
                         style={{ display: isVisible[0] === index && isVisible[1] === 'acontecimento' ? 'flex' : 'none' }}
                       >
                         {item.acontecimentos?.map((acontecimento, idx) => (
-                          <div key={idx} >
-                            <div className="flex flex-row items-center justify-start gap-4 -ml-2">
-                              <div className="h-2 w-2 bg-black rounded-full"></div>
-                              <div className="font-bold">{acontecimento.data}</div>
+                          <div key={idx} className="mb-4">
+                            <div className="flex flex-row items-start justify-start gap-4">
+                              <div className="flex flex-row items-center gap-4">
+                                <div className="h-2 w-2 bg-black rounded-full -ml-[23px]"></div>
+                                <div className="font-bold whitespace-nowrap">{acontecimento.data}</div>
+                              </div>
                               <div>{acontecimento.descricao}</div>
                             </div>
                           </div>
-
                         ))}
                       </div>
                     </div>
