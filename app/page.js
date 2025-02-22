@@ -271,14 +271,18 @@ export default function Page() {
                         </div>
                       </div>
                       <div
-                        className="relative flex flex-row flex-wrap justify-center gap-4 mt-2"
+                        className="relative flex flex-row flex-wrap justify-start gap-4 mt-2 border-l-8 border-yellow-300"
                         style={{ display: isVisible[0] === index && isVisible[1] === 'acontecimento' ? 'flex' : 'none' }}
                       >
                         {item.acontecimentos?.map((acontecimento, idx) => (
-                          <div key={idx} className="-ml-50">
-                            <span className="font-bold pr-8">{acontecimento.data}</span>
-                            <span>{acontecimento.descricao}</span>
+                          <div key={idx} >
+                            <div className="flex flex-row items-center justify-start gap-4 -ml-2">
+                              <div className="h-2 w-2 bg-black rounded-full"></div>
+                              <div className="font-bold">{acontecimento.data}</div>
+                              <div>{acontecimento.descricao}</div>
+                            </div>
                           </div>
+
                         ))}
                       </div>
                     </div>
@@ -525,14 +529,19 @@ export default function Page() {
                       </div>
                     </div>
                     <div
-                      className="relative flex flex-row flex-wrap justify-center gap-4 mt-2"
+                      className="relative flex flex-row flex-wrap justify-start gap-4 mt-2 pt-4"
                       style={{ display: isVisible[0] === index && isVisible[1] === 'acontecimento' ? 'flex' : 'none' }}
                     >
                       {item.acontecimentos?.map((acontecimento, idx) => (
-                        <div key={idx} className="-ml-50">
-                          <span className="font-bold pr-8">{acontecimento.data}</span>
-                          <span>{acontecimento.descricao}</span>
+                        <div key={idx} >
+                          <div className="flex flex-row items-center justify-start gap-4">
+                            <div className="h-2 w-2 bg-black rounded-full -ml-[110px]"></div>
+                            <div className="w-[110px]"><hr className="w-full border-t-2 border-black"></hr></div>
+                            <div className="font-bold">{acontecimento.data}</div>
+                            <div>{acontecimento.descricao}</div>
+                          </div>
                         </div>
+
                       ))}
                     </div>
                   </div>
