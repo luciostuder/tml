@@ -13,6 +13,9 @@ export default function Page() {
   // Fetch data
   const { data: dominios, error, isLoading } = useSWR('/api/dominios', fetcher);
 
+
+  
+
   //
   // Render
   if (error) return <div>Falha ao carregar os dominios. Tente novamente. Erro: {error.message}</div>;

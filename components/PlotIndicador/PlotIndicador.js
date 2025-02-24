@@ -48,7 +48,7 @@ export default function PlotIndicador({ indicador }) {
       y: {
         title: {
           display: true,
-          text: indicador.unidade ? indicador.unidade : '' + ' ' + indicador.descricao,
+          text: indicador.unidade ? indicador.unidade : '' + ' ',
         },
       },
     },
