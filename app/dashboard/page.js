@@ -12,12 +12,21 @@ export default function Page() {
   //
   // Fetch data
   const { data: metricas, error, isLoading } = useSWR('/api/metricas', fetcher);
+ 
+  //
+  // Fetch data
+  const { data: metricasTml, errorTml, isLoadingTml } = useSWR('/api/metricas-tml', fetcher);
 
   //
   // Render
-  if (error) return <div>Falha ao carregar as métricas. Tente novamente.</div>;
-  if (isLoading) return <div>Loading...</div>;
-  if (!metricas || metricas.length === 0) return <div>No data available</div>;
+  if (error) return <div>Falha ao carregar as métricas. Tente novamente. Erro: {error.message}</div>;
+  if (isLoading) return <div>Carregando métricas...</div>;
+  if (!metricas || metricas.length === 0) return <div>Nenhum dado disponível para métricas.</div>;
+
+  if (errorTml) return <div>Falha ao carregar as métricas TML. Tente novamente. Erro: {errorTml.message}</div>;
+  if (isLoadingTml) return <div>Carregando métricas TML...</div>;
+  if (!metricasTml || metricasTml.length === 0) return <div>Nenhum dado disponível para métricas TML.</div>;
+
 
   return (
     <div className="">
@@ -32,6 +41,14 @@ export default function Page() {
 
       <div className="pt-[190px] p-10 flex flex-col justify-center items-center">
         {metricas.map((metrica, index) => (
+          <div key={index} className="mb-10">
+            <PlotMetrica info={metrica} />
+          </div>
+        ))}
+      </div>
+
+      <div className="pt-[190px] p-10 flex flex-col justify-center items-center">
+        {metricasTml.map((metrica, index) => (
           <div key={index} className="mb-10">
             <PlotMetrica info={metrica} />
           </div>
