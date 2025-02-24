@@ -27,7 +27,7 @@ export default function PlotIndicador({ indicador }) {
 
   const options = {
     responsive: true,
- //   maintainAspectRatio: false, // Garante que o gráfico se ajuste ao contêiner
+    //   maintainAspectRatio: false, // Garante que o gráfico se ajuste ao contêiner
     plugins: {
       legend: {
         display: false, // Exibe a legenda
@@ -55,7 +55,7 @@ export default function PlotIndicador({ indicador }) {
   };
 
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center pt-8">
       <div className="flex flex-row justify-center items-center">
         <Image
           src={`/images/${indicador.imagem.split('/')[3]}`}
@@ -63,11 +63,10 @@ export default function PlotIndicador({ indicador }) {
           width={20}
           height={20}
         />
-        <h1>{indicador.nome}</h1>
+        <h1 className="text-xl" >{indicador.nome}</h1>
       </div>
-      <div>
-        <Bar data={data} options={options}  width={undefined} height={undefined} />
-      </div>
+      <Bar data={data} options={options} width={undefined} height={undefined} />
+      <div>{indicador.descricao}</div>
     </div>
   )
 }

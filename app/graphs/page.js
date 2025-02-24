@@ -14,7 +14,7 @@ export default function Page() {
   const { data: dominios, error, isLoading } = useSWR('/api/dominios', fetcher);
 
 
-  
+
 
   //
   // Render
@@ -37,7 +37,7 @@ export default function Page() {
       <div className="pt-[190px] p-10 flex flex-col justify-center items-center">
         {dominios.map((dominio, index) => (
           <div>
-            <h2 className="text-xl font-bold text-center">{dominio.nome}</h2>
+            <h2 className="text-4xl font-bold text-center">{dominio.nome}</h2>
             <div key={index} className="mb-10 flex flex-row flex-wrap gap-20 justify-center items-center">
               {dominio.indicadores.map((indicador, index) => (
                 <div key={index} className="mb-10">
