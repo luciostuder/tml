@@ -41,7 +41,7 @@ export default function PlotIndicador({ indicador }) {
     scales: {
       x: {
         title: {
-          display: true,
+          display: false,
           text: "Ano",
         },
       },
@@ -55,18 +55,18 @@ export default function PlotIndicador({ indicador }) {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center pt-8">
+    <div className="flex flex-col justify-center items-center pt-8 w-[500px]">
       <div className="flex flex-row justify-center items-center">
         <Image
           src={`/images/${indicador.imagem.split('/')[3]}`}
           alt={indicador.descricao}
-          width={20}
-          height={20}
+          width={60}
+          height={60}
         />
         <h1 className="text-xl" >{indicador.nome}</h1>
       </div>
+      <div className="text-center text-sm text-gray-400">{indicador.descricao}</div>
       <Bar data={data} options={options} width={undefined} height={undefined} />
-      <div>{indicador.descricao}</div>
     </div>
   )
 }
