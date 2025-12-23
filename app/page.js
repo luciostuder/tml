@@ -13,7 +13,7 @@ export default function Page() {
 
   //
   // Fetch data
-  const { data: info, error, isLoading } = useSWR('api/tml-info', fetcher);
+  const { data: info, error, isLoading } = useSWR('data/tml-info.json', fetcher);  // pôr "api/tml-info" para usar api
 
   //
   // Render
