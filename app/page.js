@@ -4,16 +4,24 @@ import React from 'react'
 import useSWR from 'swr'
 import Desktop from '@/components/Desktop/Desktop';
 import Mobile from '@/components/Mobile/Mobile';
-import Link from 'next/link';
 
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
+const fetcher = async (url) => {
+    const res = await fetch(url)
+    if (!res.ok)
+        throw new Error(`"Erro" ${res.status}`)
+    const data =  await res.json()
+    return data
+}
+
 
 export default function Page() {
 
   //
   // Fetch data
-  const { data: info, error, isLoading } = useSWR('data/tml-info.json', fetcher);  // pôr "api/tml-info" para usar api
+  
+  const url = 'api/tml-info'
+  const { data: info, error, isLoading } = useSWR(url, fetcher);  
 
   //
   // Render
