@@ -197,7 +197,8 @@ export default function Desktop({info}) {
                         </div>
                         <div
                           className="relative flex flex-row flex-wrap justify-center gap-4 mt-2"
-                          style={{ display: isVisible[0] === index && isVisible[1] === 'atividade' ? 'flex' : 'none' }}
+                         // style={{ display: isVisible[0] === index && isVisible[1] === 'atividade' ? 'flex' : 'none' }}
+                          style={{ display: 'flex' }} 
                         >
 
                           {item.atividades?.map((atividade, idx) => (
@@ -207,7 +208,10 @@ export default function Desktop({info}) {
                                   {atividade.numero} {atividade.descricao}
                                 </div>
                               </div>
-                              <div className="hidden group-hover:block -mt-4 pt-6 mb-2 p-2 w-[30ch] rounded-xl bg-[#f6f6f5]">
+                              <div 
+                                // className="hidden group-hover:block -mt-4 pt-6 mb-2 p-2 w-[30ch] rounded-xl bg-[#f6f6f5]"
+                                className=" -mt-4 pt-6 mb-2 p-2 w-[30ch] rounded-xl bg-[#f6f6f5]"
+                              >
                                 {atividade.topicos?.map((topico, idx) => (
                                   <div key={idx}>
                                     {topico.descricao != "" && (
@@ -253,7 +257,8 @@ export default function Desktop({info}) {
                         </div>
                         <div
                           className="relative flex flex-row flex-wrap justify-start gap-4 mt-2 pt-4"
-                          style={{ display: isVisible[0] === index && isVisible[1] === 'acontecimento' ? 'flex' : 'none' }}
+                         // style={{ display: isVisible[0] === index && isVisible[1] === 'acontecimento' ? 'flex' : 'none' }}
+                        style={{ display: 'flex' }} 
                         >
                           {item.acontecimentos?.map((acontecimento, idx) => (
                             <div key={idx} className="-ml-100 w-60">

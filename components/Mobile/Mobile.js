@@ -205,7 +205,8 @@ export default function Mobile({info}) {
                               </div>
                               <div
                                 className="relative flex flex-row flex-wrap justify-center gap-4 mt-2"
-                                style={{ display: isVisible[0] === index && isVisible[1] === 'atividade' ? 'flex' : 'none' }}
+                                // style={{ display: isVisible[0] === index && isVisible[1] === 'atividade' ? 'flex' : 'none' }}
+                                style={{ display: 'flex' }}  // Força visível sempre
                               >
                                 {item.atividades?.map((atividade, idx) => (
                                   <div key={idx} className="group relative -top-8 flex flex-col flex-wrap items-center mt-2">
@@ -214,7 +215,10 @@ export default function Mobile({info}) {
                                         {atividade.numero} {atividade.descricao}
                                       </div>
                                     </div>
-                                    <div className="hidden group-hover:block -mt-4 pt-6 mb-2 p-2 w-[30ch] rounded-xl bg-[#f6f6f5]">
+                                    <div 
+                                      // className="hidden group-hover:block -mt-4 pt-6 mb-2 p-2 w-[30ch] rounded-xl bg-[#f6f6f5]"
+                                      className=" -mt-4 pt-6 mb-2 p-2 w-[30ch] rounded-xl bg-[#f6f6f5]"
+                                    >
                                       {atividade.topicos?.map((topico, idx) => (
                                         <div key={idx}>
                                           {topico.descricao != "" && (
@@ -259,7 +263,8 @@ export default function Mobile({info}) {
                               </div>
                               <div
                                 className="relative flex flex-row flex-wrap justify-start gap-4 mt-2 pt-4"
-                                style={{ display: isVisible[0] === index && isVisible[1] === 'acontecimento' ? 'flex' : 'none' }}
+                                //style={{ display: isVisible[0] === index && isVisible[1] === 'acontecimento' ? 'flex' : 'none' }}
+                                style={{ display: 'flex' }}  // Força visível sempre
                               >
                                 {item.acontecimentos?.map((acontecimento, idx) => (
                                   <div key={idx} className="mb-4">
