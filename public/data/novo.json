@@ -1,0 +1,357 @@
+[
+  {
+    "ano": [2021, "Criação formal e início da operação metropolitana"],
+    "highlights": [
+      { "descricao": "Criação formal da *Transportes Metropolitanos de Lisboa*." },
+      { "descricao": "Arranque do *modelo metropolitano integrado* de transportes." },
+      { "descricao": "Implementação dos *primeiros projetos estruturantes*." }
+    ],
+    "metricas": [
+      {
+        "nome": "Transações",
+        "numero": 95,
+        "grandeza": "M",
+        "descricao": "Transações realizadas no sistema Navegante",
+        "metrica_tipo_svg": "transacoes.svg"
+      },
+      {
+        "nome": "Contratos",
+        "numero": 14,
+        "grandeza": "",
+        "descricao": "Contratos de serviço público celebrados",
+        "metrica_tipo_svg": "contratos.svg"
+      },
+      {
+        "nome": "Municípios",
+        "numero": 18,
+        "grandeza": "",
+        "descricao": "Municípios integrados no sistema",
+        "metrica_tipo_svg": "municipios.svg"
+      }
+    ],
+    "tmls": [
+      {
+        "numero": 18,
+        "descricao": "municípios abrangidos",
+        "tml_tipo_svg": "CMet.svg"
+      },
+      {
+        "numero": 1,
+        "descricao": "modelo metropolitano",
+        "tml_tipo_svg": "modelo.svg"
+      },
+      {
+        "numero": 14,
+        "descricao": "contratos ativos",
+        "tml_tipo_svg": "contratos_TML.svg"
+      }
+    ],
+    "atividades": [
+      {
+        "numero": 14,
+        "descricao": "contratos de serviço público",
+        "topicos": [
+          {
+            "descricao": "Contratualização",
+            "items": [
+              { "descricao": "Contratos intermunicipais" },
+              { "descricao": "Definição de níveis de serviço" }
+            ]
+          }
+        ]
+      },
+      {
+        "numero": 10,
+        "descricao": "ações operacionais",
+        "topicos": [
+          {
+            "descricao": "Arranque",
+            "items": [
+              { "descricao": "Transição de operadores" },
+              { "descricao": "Acompanhamento inicial da operação" }
+            ]
+          }
+        ]
+      },
+      {
+        "numero": 6,
+        "descricao": "ações institucionais",
+        "topicos": [
+          {
+            "descricao": "Organização",
+            "items": [
+              { "descricao": "Criação de equipas" },
+              { "descricao": "Definição de processos internos" }
+            ]
+          }
+        ]
+      }
+    ],
+    "acontecimentos": [
+      { "data": "Jan 2021", "descricao": "Criação formal da Transportes Metropolitanos de Lisboa." },
+      { "data": "Fev 2021", "descricao": "Início da operação metropolitana integrada." },
+      { "data": "Nov 2021", "descricao": "Conclusão da fase inicial de estabilização da operação." }
+    ]
+  },
+
+  {
+    "ano": [2022, "Consolidação da operação e foco no passageiro"],
+    "highlights": [
+      { "descricao": "Consolidação do *modelo operacional metropolitano*." },
+      { "descricao": "Reforço da *qualidade do serviço ao passageiro*." },
+      { "descricao": "Expansão dos *canais de comunicação da TML*." }
+    ],
+    "metricas": [
+      {
+        "nome": "Passageiros",
+        "numero": 420,
+        "grandeza": "M",
+        "descricao": "Passageiros transportados",
+        "metrica_tipo_svg": "passageiro.svg"
+      },
+      {
+        "nome": "Indicadores",
+        "numero": 12,
+        "grandeza": "",
+        "descricao": "Indicadores de desempenho monitorizados",
+        "metrica_tipo_svg": "kpi.svg"
+      },
+      {
+        "nome": "Canais",
+        "numero": 6,
+        "grandeza": "",
+        "descricao": "Canais de comunicação ativos",
+        "metrica_tipo_svg": "canais.svg"
+      }
+    ],
+    "tmls": [
+      {
+        "numero": 6,
+        "descricao": "canais de comunicação",
+        "tml_tipo_svg": "canais_TML_geral.svg"
+      },
+      {
+        "numero": 1,
+        "descricao": "sistema Navegante consolidado",
+        "tml_tipo_svg": "navegante.svg"
+      },
+      {
+        "numero": 22,
+        "descricao": "ações de monitorização",
+        "tml_tipo_svg": "monitorizacao.svg"
+      }
+    ],
+    "atividades": [
+      {
+        "numero": 22,
+        "descricao": "ações de monitorização",
+        "topicos": [
+          {
+            "descricao": "Qualidade do serviço",
+            "items": [
+              { "descricao": "Pontualidade" },
+              { "descricao": "Regularidade" }
+            ]
+          }
+        ]
+      },
+      {
+        "numero": 9,
+        "descricao": "ações com passageiros",
+        "topicos": [
+          {
+            "descricao": "Comunicação",
+            "items": [
+              { "descricao": "Sessões de esclarecimento" },
+              { "descricao": "Apoio ao utilizador" }
+            ]
+          }
+        ]
+      },
+      {
+        "numero": 5,
+        "descricao": "ações de melhoria",
+        "topicos": [
+          {
+            "descricao": "Serviço",
+            "items": [
+              { "descricao": "Ajustes operacionais" },
+              { "descricao": "Reforço de informação ao passageiro" }
+            ]
+          }
+        ]
+      }
+    ],
+    "acontecimentos": [
+      { "data": "Mar 2022", "descricao": "Reforço dos canais de apoio ao passageiro." },
+      { "data": "Jun 2022", "descricao": "Implementação de novos indicadores de desempenho." },
+      { "data": "Dez 2022", "descricao": "Encerramento do primeiro ciclo anual completo de operação." }
+    ]
+  },
+
+  {
+    "ano": [2023, "Inovação, dados e capacitação interna"],
+    "highlights": [
+      { "descricao": "Aposta em *projetos estruturantes de inovação*." },
+      { "descricao": "Evolução do sistema *Navegante*." },
+      { "descricao": "Integração de *dados para apoio à decisão*." },
+      { "descricao": "Reforço da *formação técnica interna*." }
+    ],
+    "metricas": [
+      {
+        "nome": "Formação",
+        "numero": 3200,
+        "grandeza": "h",
+        "descricao": "Horas de formação realizadas",
+        "metrica_tipo_svg": "tempo_formacao.svg"
+      },
+      {
+        "nome": "Projetos",
+        "numero": 16,
+        "grandeza": "",
+        "descricao": "Projetos de inovação ativos",
+        "metrica_tipo_svg": "inovacao.svg"
+      },
+      {
+        "nome": "Sistemas",
+        "numero": 8,
+        "grandeza": "",
+        "descricao": "Sistemas integrados",
+        "metrica_tipo_svg": "sistemas.svg"
+      }
+    ],
+    "tmls": [
+      {
+        "numero": 1,
+        "descricao": "sistema metropolitano",
+        "tml_tipo_svg": "TML.svg"
+      },
+      {
+        "numero": 8,
+        "descricao": "sistemas integrados",
+        "tml_tipo_svg": "integracao.svg"
+      },
+      {
+        "numero": 3200,
+        "descricao": "horas de capacitação",
+        "tml_tipo_svg": "formacao.svg"
+      }
+    ],
+    "atividades": [
+      {
+        "numero": 16,
+        "descricao": "projetos de inovação",
+        "topicos": [
+          {
+            "descricao": "Digitalização",
+            "items": [
+              { "descricao": "Integração de sistemas" },
+              { "descricao": "Modernização de processos" }
+            ]
+          }
+        ]
+      },
+      {
+        "numero": 7,
+        "descricao": "ações de formação",
+        "topicos": [
+          {
+            "descricao": "Capacitação",
+            "items": [
+              { "descricao": "Formação técnica" },
+              { "descricao": "Formação operacional" }
+            ]
+          }
+        ]
+      },
+      {
+        "numero": 4,
+        "descricao": "ações de dados",
+        "topicos": [
+          {
+            "descricao": "Análise",
+            "items": [
+              { "descricao": "Dashboards" },
+              { "descricao": "Relatórios analíticos" }
+            ]
+          }
+        ]
+      }
+    ],
+    "acontecimentos": [
+      { "data": "Fev 2023", "descricao": "Lançamento de novos projetos de inovação." },
+      { "data": "Mai 2023", "descricao": "Implementação de ferramentas de apoio à decisão." },
+      { "data": "Nov 2023", "descricao": "Publicação do relatório anual de atividade." }
+    ]
+  },
+
+  {
+    "ano": [2024, "Maturidade operacional e otimização do serviço"],
+    "highlights": [
+      { "descricao": "Otimização contínua do *serviço metropolitano*." },
+      { "descricao": "Reforço da *eficiência operacional*." },
+      { "descricao": "Melhoria dos *processos internos*." }
+    ],
+    "metricas": [
+      {
+        "nome": "Trabalhadores",
+        "numero": 110,
+        "grandeza": "",
+        "descricao": "Trabalhadores envolvidos na operação",
+        "metrica_tipo_svg": "trabalhadores.svg"
+      },
+      {
+        "nome": "Processos",
+        "numero": 28,
+        "grandeza": "",
+        "descricao": "Processos otimizados",
+        "metrica_tipo_svg": "processos.svg"
+      },
+      {
+        "nome": "Avaliações",
+        "numero": 12,
+        "grandeza": "",
+        "descricao": "Avaliações operacionais realizadas",
+        "metrica_tipo_svg": "avaliacao.svg"
+      }
+    ],
+    "tmls": [
+      {
+        "numero": 5,
+        "descricao": "departamentos operacionais",
+        "tml_tipo_svg": "departamentos.svg"
+      },
+      {
+        "numero": 28,
+        "descricao": "processos normalizados",
+        "tml_tipo_svg": "normalizacao.svg"
+      },
+      {
+        "numero": 1,
+        "descricao": "modelo otimizado",
+        "tml_tipo_svg": "otimizacao.svg"
+      }
+    ],
+    "atividades": [
+      {
+        "numero": 18,
+        "descricao": "ações de melhoria",
+        "topicos": [
+          {
+            "descricao": "Processos",
+            "items": [
+              { "descricao": "Normalização de procedimentos" },
+              { "descricao": "Otimização de fluxos" }
+            ]
+          }
+        ]
+      },
+      {
+        "numero": 6,
+        "descricao": "ações de avaliação",
+        "topicos": [
+          {
+            "descricao": "Desempenho",
+            "items": [
+              { "descricao": "Indicadores operacionais" },
+              { "des

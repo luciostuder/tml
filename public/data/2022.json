@@ -1,0 +1,223 @@
+{
+  "ano": [2022, "Projetos estruturantes e afirmação da identidade metropolitana"],
+  "highlights": [
+    { "descricao": "Lançamento da *operação da Carris Metropolitana*." },
+    { "descricao": "Unificação da *imagem da operação rodoviária metropolitana*." },
+    { "descricao": "Afirmação de uma *identidade metropolitana* para as marcas." },
+    { "descricao": "Lançamento dos *Espaços navegante®*." },
+    { "descricao": "Restruturação tarifária dos títulos ocasionais (*redução de 900 para 4 títulos*)." }
+  ],
+  "metricas": [
+    {
+      "nome": "Passageiros",
+      "numero": 535,
+      "grandeza": "M",
+      "descricao": "Passageiros transportados",
+      "metrica_tipo_svg": "passageiro.svg"
+    },
+    {
+      "nome": "Carris Metropolitana",
+      "numero": 11,
+      "grandeza": "M",
+      "descricao": "Passageiros transportados na Carris Metropolitana",
+      "metrica_tipo_svg": "CMet.svg"
+    },
+    {
+      "nome": "Passes",
+      "numero": 8,
+      "grandeza": "M",
+      "descricao": "Passes carregados",
+      "metrica_tipo_svg": "cartao_navegante.svg"
+    },
+    {
+      "nome": "Transações",
+      "numero": 2.1,
+      "grandeza": "M",
+      "descricao": "Transações realizadas",
+      "metrica_tipo_svg": "transacoes.svg"
+    },
+    {
+      "nome": "Formação",
+      "numero": 1520,
+      "grandeza": "h",
+      "descricao": "Horas de formação realizadas",
+      "metrica_tipo_svg": "tempo_formacao.svg"
+    }
+  ],
+  "tmls": [
+    {
+      "numero": 72,
+      "descricao": "trabalhadores (29 homens, 43 mulheres)",
+      "tml_tipo_svg": "trabalhadores.svg"
+    },
+    {
+      "numero": 5,
+      "descricao": "departamentos",
+      "tml_tipo_svg": "departamentos.svg"
+    },
+    {
+      "numero": 319,
+      "descricao": "procedimentos lançados",
+      "tml_tipo_svg": "procedimentos.svg"
+    },
+    {
+      "numero": 2.1,
+      "descricao": "canais da TML",
+      "tml_tipo_svg": "canais_TML_geral.svg"
+    }
+  ],
+  "atividades": [
+    {
+      "numero": 1,
+      "descricao": "marca",
+      "topicos": [
+        {
+          "descricao": "Identidade",
+          "items": [
+            { "descricao": "Carris Metropolitana" },
+            { "descricao": "Unificação da imagem metropolitana" }
+          ]
+        },
+        {
+          "descricao": "Equipamento",
+          "items": [
+            { "descricao": "Desenho dos Espaços navegante® (interior e exterior)" },
+            { "descricao": "Desenho dos horários da Carris Metropolitana" },
+            { "descricao": "Desenho dos postaletes da Carris Metropolitana" }
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 3,
+      "descricao": "conceitos",
+      "topicos": [
+        {
+          "descricao": "Posicionamento",
+          "items": [
+            { "descricao": "NaaS – navegante as a service" },
+            { "descricao": "Carris Metropolitana Mobilidade Colectiva" },
+            { "descricao": "Carris Metropolitana – Espera sempre por nós" }
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "descricao": "novos produtos",
+      "topicos": [
+        {
+          "descricao": "Oferta",
+          "items": [
+            { "descricao": "Novos autocarros com Wi-Fi e USB" },
+            { "descricao": "Conversor de linhas online" },
+            { "descricao": "Horários online com geolocalização e exportação PDF" },
+            { "descricao": "Pontos navegante® assistidos" }
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 7,
+      "descricao": "novos serviços",
+      "topicos": [
+        {
+          "descricao": "Serviços ao passageiro",
+          "items": [
+            { "descricao": "Espaços navegante® na margem sul" },
+            { "descricao": "Intranet procedimental" },
+            { "descricao": "Website da TML" },
+            { "descricao": "Website da Carris Metropolitana" },
+            { "descricao": "Horários no Citymapper" },
+            { "descricao": "Call center dedicado" },
+            { "descricao": "Plataforma das escolas (passes internalizados)" },
+            { "descricao": "Bici Box na Interface de Setúbal" }
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "descricao": "canais de venda",
+      "topicos": [
+        {
+          "descricao": "Distribuição",
+          "items": [
+            { "descricao": "ATM" },
+            { "descricao": "Portal VIVA" },
+            { "descricao": "Ponto navegante®" },
+            { "descricao": "Ponto navegante® assistido" }
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "descricao": "campanhas",
+      "topicos": [
+        {
+          "descricao": "Comunicação",
+          "items": [
+            { "descricao": "Lançamento da Carris Metropolitana" },
+            { "descricao": "O Futuro é Colectivo (com IMT)" },
+            { "descricao": "Vox Pop – testemunhos navegante®" },
+            { "descricao": "Incentivo à utilização do transporte" }
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 6,
+      "descricao": "eventos",
+      "topicos": [
+        {
+          "descricao": "Participação e organização",
+          "items": [
+            { "descricao": "Hospital da Bonecada" },
+            { "descricao": "Seminário Eurotransporte" },
+            { "descricao": "FCT – acolhimento ao caloiro" },
+            { "descricao": "47th EMTA General Meeting" },
+            { "descricao": "Transporte Público com Futuro – 3º aniversário navegante®" },
+            { "descricao": "Lançamento da operação na Área 3" }
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "descricao": "projetos europeus",
+      "topicos": [
+        {
+          "descricao": "Internacionalização",
+          "items": [
+            { "descricao": "Mobil.T" },
+            { "descricao": "Smarthubs" },
+            { "descricao": "Vox Pop" },
+            { "descricao": "Data P4" }
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 3,
+      "descricao": "estudos",
+      "topicos": [
+        {
+          "descricao": "Investigação e planeamento",
+          "items": [
+            { "descricao": "Definição da Rede Ciclável" },
+            { "descricao": "Plataforma integradora de informação ao público" },
+            { "descricao": "Avaliação qualitativa da satisfação dos passageiros" }
+          ]
+        }
+      ]
+    }
+  ],
+  "acontecimentos": [
+    { "data": "Jan 2022", "descricao": "Lançamento da operação da Carris Metropolitana." },
+    { "data": "Mar 2022", "descricao": "Inauguração dos primeiros Espaços navegante®." },
+    { "data": "Jun 2022", "descricao": "Implementação da nova estrutura tarifária." },
+    { "data": "Set 2022", "descricao": "Arranque dos novos serviços digitais e canais." },
+    { "data": "Dez 2022", "descricao": "Encerramento do ano com consolidação da identidade metropolitana." }
+  ]
+}
